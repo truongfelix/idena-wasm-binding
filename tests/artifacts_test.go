@@ -56,7 +56,7 @@ func TestStaticLibraryArtifactSource(t *testing.T) {
 	require.NoError(t, err)
 
 	values := parseArtifactSource(t, data)
-	require.Equal(t, "https://github.com/ubiubi18/idena-wasm", values["repository"])
+	require.Equal(t, "https://github.com/truongfelix/idena-wasm", values["repository"])
 	requireCommitHash(t, values["idena_wasm_revision"])
 	requireCommitHash(t, values["wasmer_revision"])
 	_, err = strconv.ParseUint(values["workflow_run"], 10, 64)

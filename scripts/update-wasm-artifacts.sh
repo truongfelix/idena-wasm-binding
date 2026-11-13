@@ -10,7 +10,8 @@ fi
 run_id="$1"
 expected_revision="$2"
 expected_wasmer_revision="$3"
-wasm_repo="${IDENA_WASM_REPO:-ubiubi18/idena-wasm}"
+wasm_repo="${IDENA_WASM_REPO:-truongfelix/idena-wasm}"
+wasmer_repo="${IDENA_WASMER_REPO:-truongfelix/wasmer}"
 root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 tmp_dir="$(mktemp -d)"
 trap 'rm -rf "${tmp_dir}"' EXIT
@@ -47,9 +48,9 @@ actual_wasmer_revision="$(
     --locked \
     --no-deps \
     --format-version 1 |
-    jq -er '
+    jq -er --arg source "git+https://github.com/${wasmer_repo}?rev=" '
       [.packages[0].dependencies[]
-        | select(.source | startswith("git+https://github.com/ubiubi18/wasmer?rev="))
+        | select(.source | startswith($source))
         | .source
         | capture("[?]rev=(?<revision>[0-9a-f]{40})$").revision]
       | unique
