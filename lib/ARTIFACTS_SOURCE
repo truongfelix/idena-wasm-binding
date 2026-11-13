@@ -1,5 +1,5 @@
-repository=https://github.com/ubiubi18/idena-wasm
-idena_wasm_revision=b686ed84d26b43dfa74ea12a0d3af1b120a50598
-workflow_run=35934763212
+repository=https://github.com/truongfelix/idena-wasm
+idena_wasm_revision=e2f8f9db9019a51d39c3cad36f74bdbb341748e6
+workflow_run=43294391452
 rust_toolchain=1.97.0
 wasmer_revision=45f9bccf49187be24874400067923abda4c037da

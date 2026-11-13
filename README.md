@@ -7,7 +7,7 @@ This is experimental research software. I cannot guarantee its security, correct
 Go bindings and platform static libraries for the Idena smart-contract
 runtime.
 
-[![Test Idena-wasm-binding](https://github.com/ubiubi18/idena-wasm-binding/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/ubiubi18/idena-wasm-binding/actions/workflows/main.yml)
+[![Test Idena-wasm-binding](https://github.com/truongfelix/idena-wasm-binding/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/truongfelix/idena-wasm-binding/actions/workflows/main.yml)
 
 > This repository is a versioned bridge between consensus-sensitive Rust and
 > Go code. It has no independent binary release. Use the exact revision pinned
